@@ -1,0 +1,66 @@
+@keyframes menu-loader {
+    from {
+        margin-top: 100px;
+        opacity: 0;
+    }
+
+    to {
+        position: fixed;
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes supply-loader {
+    0% {
+        transform: rotate(50deg);
+        opacity: 0;
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+@keyframes facebook-Logo-loader {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 1%;
+    }
+}
+@keyframes header-text-slider {
+    0% {
+        left: -150%;
+    }
+    75% {
+        left: 1.5%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+@keyframes price-underline-slider {
+    0% {
+        opacity: 0;
+        left: -150%;
+    }
+    75% {
+        left: 1.5%;
+    }
+    100% {
+        opacity: 1;
+        left: 0%;
+    }
+}
+@keyframes container-loader {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

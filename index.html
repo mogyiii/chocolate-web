@@ -1,0 +1,307 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Chocolate-Web</title>
+        <link rel="icon" type="image/png" href="img/icon.png" />
+        <!--Style-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
+        <link rel="stylesheet" href="css/animations.css" type="text/css">
+        <!--JS-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/6096ca5492.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('a[href^="#"]').on('click', function(event) {
+                    var target = $(this.getAttribute('href'));
+                    if( target.length ) {
+                        event.preventDefault();
+                        $('html, body').stop().animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                    }
+                });
+            });
+            $( window ).scroll(function() {
+                console.log($(window).scrollTop());
+                if($(window).scrollTop() !=0){
+                    $(".menu_bcg").css("background-color","#733000");
+                }else{
+                    $(".menu_bcg").css("background-color","transparent");
+                }
+                if($(window).scrollTop() > 300){
+                    $(".supply").addClass("supply-tile");
+                    $("#Supply-title-bg").addClass("title-bg-before");
+                    $(".supply").css("visibility","visible");
+                }
+                if($(window).scrollTop() > 714){
+                    $("#Ref-title-bg").addClass("title-bg-before");
+                    $("#animated-ref").addClass("container-animated");
+                }
+                if($(window).scrollTop() > 1098){
+                    $("#Price-title-bg").addClass("title-bg-before");
+                    $("#animated-price").addClass("container-animated");
+                }
+                if($(window).scrollTop() > 1693){
+                    $("#Ava-title-bg").addClass("title-bg-before");
+                    $("#animated-ava").addClass("container-animated");
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="facebook-Logo"><a href="https://www.facebook.com/Chocolate-Web-115355939851218"><i class="fab fa-facebook"></i></a></div>
+            <!--Menu-->
+            <nav class="navbar navbar-expand-lg navbar-light menu_bcg menu_text_height fix_menu">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <img src="img/logo.png" width="250">
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                        <div class="padding_left"></div>
+                    <ul class="navbar-nav mr-auto padding-null">
+                        <li class="nav-item ani-li">
+                            <a class="nav-link text-white text-shadow" href="#Supply">Amit Kínálunk</a>
+                            <div class="underlining"></div>
+                        </li>
+                        <li class="nav-item ani-li">
+                            <a class="nav-link text-white text-shadow" href="#ref">Referenciáink</a>
+                            <div class="underlining"></div>
+                        </li>
+                        <li class="nav-item ani-li">
+                            <a class="nav-link text-white text-shadow" href="#price">Áraink</a>
+                            <div class="underlining"></div>
+                        </li>
+                        <li class="nav-item ani-li">
+                            <a class="nav-link text-white text-shadow" href="#ava">Elérhetőség</a>
+                            <div class="underlining"></div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--Slider-->
+            <div class="header-img">
+                <div class="header-text-slider text-shadow">
+                    <div class="col-12">
+                        <h1>WebFejlesztés</h1>
+                    </div>
+                </div>
+                <div class="slider-text-bg"></div>
+                <div class="slider-underline"></div>
+            </div>
+            <!--Kínálat-->
+            <div class="container-fluid bg-color-1" id="Supply">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center mt-5">
+                            <h2 class="text-shadow title-text">Amit Kínálunk</h2>
+                            <div id="Supply-title-bg"></div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-12 col-md-4 text-center">
+                            <div class="supply">
+                                <h2><i class="fas fa-drafting-compass"></i></h2>
+                                <div class="tile-underline"></div>
+                                <h4>Webdizájn</h4>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 text-center">
+                            <div class="supply">
+                                <h2><i class="fas fa-file-code"></i></h2>
+                                <div class="tile-underline"></div>
+                                <h4>Web-Fejlesztés</h4>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 text-center">
+                            <div class="supply">
+                                <h2><i class="fas fa-sync"></i></h2>
+                                <div class="tile-underline"></div>
+                                <h4>Weblap frissités</h4>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 text-center">
+                            <div class="supply">
+                                <h2><i class="fas fa-tools"></i></h2>
+                                <div class="tile-underline"></div>
+                                <h4>Karbantartás</h4>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 text-center">
+                            <div class="supply">
+                                <h2><i class="fas fa-mobile-alt"></i></h2>
+                                <div class="tile-underline"></div>
+                                <h4>Responsive</h4>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 text-center">
+                            <div class="supply">
+                                <h2><i class="fab fa-google"></i></h2>
+                                <div class="tile-underline"></div>
+                                <h4>Google barát</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Referenciáink-->
+            <div class="container-fluid bg-color-2" id="ref">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center mt-5 mb-3">
+                            <h2 class="text-shadow title-text">Referenciáink</h2>
+                            <div id="Ref-title-bg"></div>
+                        </div>
+                    </div>
+                    <div id="animated-ref">
+                        <div class="row">
+                            <div class="col-12 col-md-4 mb-5">
+                                <a href=""><div class="ref-tile">
+                                    <div class="ref-tile-hv text-center align-middle text-shadow">
+                                        <h3>Clean&Sharm</h3>
+                                    </div>
+                                </div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Árak-->
+            <div class="container-fluid price-bg" id="price">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center mt-5 mb-3">
+                            <h2 class="text-shadow title-text">Áraink</h2>
+                            <div id="Price-title-bg"></div>
+                        </div>
+                    </div>
+                    <div id="animated-price">
+                        <div class="row">
+                            <div class="col-12 col-md-4 text-center mb-3">
+                                <div class="price-underline"></div>
+                                <div class="price-tile">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="price-title">
+                                                <h3><b>Standart</b></h3>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="price-description">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h5>1-5 oldalas bemutatkozó Weboldal</h5>
+                                                <hr></hr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 text-center mb-3">
+                                <div class="price-underline"></div>
+                                <div class="price-tile">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="price-title">
+                                                <h3><b>Medium</b></h3>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                    <div class="price-description">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h5>5-10 oldalas normál Weboldal</h5>
+                                                <hr></hr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 text-center mb-3">
+                                <div class="price-underline"></div>
+                                <div class="price-tile">
+                                    <div class="row">
+                                            <div class="col-12">
+                                                <div class="price-title">
+                                                    <h3><b>Premium</b></h3>
+                                                </div> 
+                                            </div>
+                                    </div>
+                                    <div class="price-description">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h5>Renszerszintú Weboldal,
+                                                    /Webshop
+                                                </h5>
+                                                <hr></hr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Elérhetőség-->
+            <div class="container-fluid bg-color-1" id="ava">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center mt-5 mb-3">
+                            <h2 class="text-shadow title-text">Elérhetőség</h2>
+                            <div id="Ava-title-bg"></div>
+                        </div>
+                    </div>
+                    <div id="animated-ava">
+                        <div class="row">
+                            <div class="col-12 col-md-4 text-left text-shadow">
+                                <p><i class="far fa-envelope"></i> Email: szabo.mate960722@gmail.com</p>
+                            </div>
+                            <div class="col-12 col-md-4 text-center text-shadow">
+                        
+                            </div>
+                            <div class="col-12 col-md-4 text-right text-shadow">
+                                    
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-4 text-left text-shadow">
+                                <p><i class="fas fa-mobile-alt"></i> Mobile: +36 30 393 2278</p>
+                            </div>
+                            <div class="col-12 col-md-4 text-center text-shadow">
+                                        
+                            </div>
+                            <div class="col-12 col-md-4 text-right text-shadow">
+                                        
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-4 text-left text-shadow">
+                                    <p><i class="fab fa-facebook"></i> Facebook: <a href="https://www.facebook.com/Chocolate-Web-115355939851218">Link</a></p>
+                            </div>
+                            <div class="col-12 col-md-4 text-center text-shadow">
+                                        
+                            </div>
+                            <div class="col-12 col-md-4 text-right text-shadow">
+                                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Lábléc-->
+            <div class="container-fluid bg-color-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center mt-2">
+                            <p><a href="https://www.linkedin.com/in/m%C3%A1t%C3%A9-szab%C3%B3-22003a192/">Fejlesztette: Szabó Máté</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>
